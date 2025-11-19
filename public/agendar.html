@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio55.com</title>
+    <link rel="stylesheet" href="./css/agendar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/Assets/logo2.png" alt="Logotipo do Studio55" />
+      </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendar.html">Agendamentos</a>
+      </nav>
+    </header>
+
+    <section class="titulo">
+      <h1>Escolha o seu horário</h1>
+      <div class="linha"></div>
+    </section>
+
+    <main>
+      <section class="conteudo">
+        <!-- Seleção de dias -->
+        <div class="dias-semana">
+          <button><span>seg</span><br /><small>05/01</small></button>
+          <button><span>ter</span><br /><small>06/01</small></button>
+          <button><span>qua</span><br /><small>07/01</small></button>
+          <button><span>quin</span><br /><small>08/01</small></button>
+          <button><span>sex</span><br /><small>09/01</small></button>
+          <button><span>sab</span><br /><small>10/01</small></button>
+          <button><span>seg</span><br /><small>12/01</small></button>
+          <button><span>ter</span><br /><small>13/01</small></button>
+          <button><span>qua</span><br /><small>14/01</small></button>
+          <button><span>quin</span><br /><small>15/01</small></button>
+          <button><span>sex</span><br /><small>16/01</small></button>
+          <button><span>sab</span><br /><small>17/01</small></button>
+          <button><span>seg</span><br /><small>19/01</small></button>
+        </div>
+
+        <!-- Seleção de horários -->
+        <div class="horas" id="horarios">
+          <button>08:00</button>
+          <button>09:00</button>
+          <button>10:00</button>
+          <button>11:00</button>
+          <button>12:00</button>
+          <button>13:00</button>
+          <button>14:00</button>
+          <button>15:00</button>
+          <button>16:00</button>
+          <button>17:00</button>
+          <button>18:00</button>
+          <button>19:00</button>
+        </div>
+
+        <!-- Seleção de serviços -->
+
+        <div class="div-select">
+          <input
+            type="text"
+            id="nome"
+            placeholder="Nome Completo"
+            required
+            oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"
+          />
+          <input
+            type="text"
+            id="telefone"
+            placeholder="Telefone"
+            required
+            maxlength="15"
+            oninput="mascaraTelefone(this)"
+          />
+        </div>
+        <label for="Servicos">Serviços</label>
+
+        <select id="Servicos" name="Serviços">
+          <option value="null"></option>
+          <option value="Corte_reto">Corte reto</option>
+          <option value="Corte_em_camadas">Corte em camadas</option>
+          <option value="Corte_chanel">Corte chanel</option>
+          <option value="Corte_pixie">Corte pixie</option>
+          <option value="Wolf_cut">Wolfcut</option>
+          <option value="Butterfly_haircut">Butterfly haircut</option>
+          <option value="Ruivo">Ruivo </option>
+          <option value="Loiro_Global">Loiro global</option>
+          <option value="Platinado">Platinado</option>
+          <option value="Luzes">Luzes</option>
+          <option value="Preto_Natural">Preto Natural</option>
+          <option value="Castanho_Iluminado">Castanho Iluminado</option>
+          <option value="Semi_Preso">Semi Preso</option>
+          <option value="Tranca">Trança</option>
+          <option value="Tranca_boxeadora">Trança boxeadora</option>
+          <option value="Tranca_Cascata">Trança cascata</option>
+          <option value="Coque_Trancado">Coque Trançado</option>
+          <option value="Coque_Despojado">Coque Despojado</option>
+        </select>
+
+        <!-- Campos de nome e telefone -->
+
+        <!-- Botão para agendar -->
+        <button class="agendar" id="btnAgendar">Agendar!</button>
+
+        <!-- Link para admin -->
+        <a href="admin.html" class="admbutton">Administração</a>
+
+        <div class="linhafooter"></div>
+
+        <!-- Avaliações -->
+        <div class="avaliacao-form">
+          <input
+            type="text"
+            class="nome"
+            placeholder="Nome:"
+            required
+            oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"
+          />
+          <textarea
+            class="texto"
+            placeholder="Enviar Texto: "
+            maxlength="300"
+          ></textarea>
+          <button class="avaliacao">Enviar Avaliação</button>
+        </div>
+
+        <div class="linha"></div>
+        <p class="ava">Avaliações</p>
+      </section>
+    </main>
+
+    <footer class="avaliacoes">
+      <div class="avaliacao-card">
+        <h3>Helena</h3>
+        <p>
+          Corte perfeito. Atendimento atencioso e resultado incrível. Saí muito
+          satisfeita!
+        </p>
+      </div>
+      <div class="avaliacao-card">
+        <h3>Luiza</h3>
+        <p>
+          Fiz corte e cor, tudo perfeito! Atendimento humanizado e resultados
+          acima das expectativas.
+        </p>
+      </div>
+      <div class="avaliacao-card">
+        <h3>Manuela</h3>
+        <p>
+          A cor ficou linda e vibrante. Profissionais cuidadosas e produtos de
+          qualidade. Excelente experiência.
+        </p>
+      </div>
+      <div class="avaliacao-card">
+        <h3>Cecília</h3>
+        <p>
+          Atendimento impecável e ambiente agradável. Profissionais pontuais e
+          simpáticos. Recomendo muito.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="/main.js"></script>
+  </body>
+</html>
